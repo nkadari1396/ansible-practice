@@ -3,7 +3,7 @@
   become: yes
   vars:
     COURSE: "DEVOPS with AWS"
-    DEVOPS: "120 HRS"
+    DURATION: "120 HRS"
     TRAINER: "SIVA KUMAR REDDY"
   tasks:
   - name: print the information
