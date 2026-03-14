@@ -8,7 +8,7 @@
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "this is "{{COURSE}}, and the duration is {{DURATION}}, with trainer {{TRAINER}}"
+      msg: "this is {{COURSE}}, and the duration is {{DURATION}}, with trainer {{TRAINER}}"
 
   tasks:
   - name: print the vars
@@ -22,4 +22,4 @@
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "this is "{{COURSE}}, and the duration is {{DURATION}}, with trainer {{TRAINER}}"
+      msg: "this is {{COURSE}}, and the duration is {{DURATION}}, with trainer {{TRAINER}}"
