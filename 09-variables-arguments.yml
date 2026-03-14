@@ -1,5 +1,5 @@
 - name: variables with arguments
-  hosts: web
+  hosts: local
   become: yes
   tasks:
   - name: print the variables with arguments
