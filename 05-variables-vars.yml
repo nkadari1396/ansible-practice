@@ -1,5 +1,5 @@
 - name: variables with vars
-  hsots: web
+  hosts: web
   become: yes
   vars:
     COURSE: "DEVOPS with AWS"
