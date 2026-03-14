@@ -6,4 +6,4 @@
   tasks:
   - name: run the variables through vars_files
     ansible.builtin.debug:
-      msg: "Hi i am learning {{COURSE}}, and the duration is {{DURATION}}, with the trainer {{SIVA KUMAR REDDY}}"
+      msg: "Hi, i am learning {{COURSE}}, and the duration is {{DURATION}}, with the trainer {{TRAINER}}"
