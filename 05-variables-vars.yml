@@ -1,0 +1,25 @@
+- name: variables with vars
+  hsots: web
+  become: yes
+  vars:
+    COURSE: "DEVOPS with AWS"
+    DEVOPS: "120 HRS"
+    TRAINER: "SIVA KUMAR REDDY"
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "this is "{{COURSE}}, and the duration is {{DURATION}}, with trainer {{TRAINER}}"
+
+  tasks:
+  - name: print the vars
+    vars:
+      COURSE: "Ansible"
+      DURATION: : "10 HRS"
+      TRAINER: "SIVA KUMAR REDDY"
+    ansible.builtin.debug:
+      msg: "I am learning {{COURSE}}, and the duration is {{DURATION}}, with trainer {{TRAINER}}"
+
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "this is "{{COURSE}}, and the duration is {{DURATION}}, with trainer {{TRAINER}}"
