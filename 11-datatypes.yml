@@ -1,0 +1,27 @@
+- name: datatypes
+  hosts: web
+  become: yes
+  connection: local
+  vars:
+    COURSE: "AWS with Devops"
+    DURATION: "120"
+    TRAINER: "SIVA KUMAR REDDY"
+  topics:
+  - AWS
+  - ansible
+  - shellscripting
+  - terraform
+  - Linux
+  - K8
+  live: true
+  tools:
+    ci: jenkins
+    cm: ansible
+    cloud: AWS
+    aws:
+    - I AM
+    - S3
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{ course }}, with duration: {{ duration }}, topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
