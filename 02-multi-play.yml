@@ -3,7 +3,7 @@
   hosts: web
   tasks:
   - name: TASK01
-    ansible.builtin.debug
+    ansible.builtin.debug:
       msg: "This is from PLAY01 and TASK01"
 
 #PLAY02
@@ -11,5 +11,5 @@
   hosts: web
   tasks:
   - name: TASK01
-    ansible.builtin.debug
+    ansible.builtin.debug:
       msg: "This is from PLAY02 and TASK01"
