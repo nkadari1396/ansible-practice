@@ -12,7 +12,7 @@
     zone: naveenkadari.com
   tasks:
   - name: ansible to install boto3 and botocore
-    ansible.buitlin.pip:
+    ansible.builtlin.pip:
       name:
       - boto3
       - botocore
