@@ -29,8 +29,8 @@
     register: ec2_instances
 
   - name: print the results of ec2_instances
-    ansible.builtin.debug
-    msg: "{{ ec2_instances }}"
+    ansible.builtin.debug:
+      msg: "{{ ec2_instances }}"
 
   - name: create r53 private_ip address
     amazon.aws.route53:
