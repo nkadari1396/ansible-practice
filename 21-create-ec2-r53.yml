@@ -1,6 +1,6 @@
 - name: install ec2-instances
   hosts: local
-  become; yes
+  become: yes
   vars:
     subnet_id:
     sg_id:
