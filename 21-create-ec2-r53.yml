@@ -1,7 +1,6 @@
 - name: install ec2-instances
   hosts: local
   connection: local
-  become: yes
   vars:
     subnet_id: subnet-0a3f1883a679a74ab
     sg_id: sg-0c37ea65a77d410b1
