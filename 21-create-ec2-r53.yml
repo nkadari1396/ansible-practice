@@ -2,9 +2,9 @@
   hosts: local
   become: yes
   vars:
-    subnet_id:
-    sg_id:
-    ami_id:
+    subnet_id: subnet-0a3f1883a679a74ab
+    sg_id: sg-0c37ea65a77d410b1
+    ami_id: ami-0220d79f3f480ecf5
     instances:
     - mysql
     - backend
@@ -14,8 +14,8 @@
   - name: ansible to install boto3 and botocore
     ansible.builtlin.pip:
       name:
-      - boto3
-      - botocore
+        - boto3
+        - botocore
       executable: pip3.9
 
   - name: install ec2_instance
@@ -36,10 +36,10 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item.item }}. {{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"
       type: A
       ttl: 1
-      value: "{{ item.instance[0].private_ip_address }}"
+      value: "{{ item.instances[0].private_ip_address }}"
       wait: true
       overwrite: true
     loop: "{{ ec2_instances.results }}"
